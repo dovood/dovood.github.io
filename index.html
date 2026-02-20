@@ -1,273 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dovdov Dev - Apps & Terms</title>
-    <!-- Font Awesome -->
+    <title>Terms of Use - Dovdov Dev</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-        :root {
-            --primary-color: #000;
-            --accent-color: #ff3e3e; 
-            --bg-color: #ffffff;
-            --card-bg: #f5f5f7;
-            --text-main: #1d1d1f;
-            --text-secondary: #86868b;
-            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
+        :root { --accent-color: #ff3e3e; --bg-color: #f8f9fa; --text-main: #1a1a2e; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
+        body { background: var(--bg-color); color: #333; line-height: 1.7; }
+        
         /* HEADER */
-        .header {
-            height: 64px;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #eee;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        .header .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-
-        .logo { font-weight: 900; font-size: 22px; letter-spacing: -1px; text-decoration: none; color: #000; text-transform: uppercase; cursor: pointer; }
+        .header { height: 64px; background: #fff; border-bottom: 1px solid #eee; display: flex; align-items: center; position: sticky; top: 0; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-weight: 900; font-size: 22px; text-decoration: none; color: #000; text-transform: uppercase; }
         .logo span { color: var(--accent-color); }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: #333; font-size: 14px; font-weight: 500; }
 
-        .nav-links { list-style: none; display: flex; gap: 25px; }
-        .nav-links a { text-decoration: none; color: #333; font-weight: 500; font-size: 14px; transition: var(--transition); cursor: pointer; }
-        .nav-links a:hover { color: var(--accent-color); }
-
-        #lang-select { border: 1px solid #ddd; background: #fff; padding: 4px 8px; border-radius: 6px; font-size: 12px; cursor: pointer; }
-
-        /* PAGES LOGIC */
-        .page { display: none; animation: fadeIn 0.5s ease; }
-        .page.active { display: block; }
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* HERO SECTION */
-        .hero { padding: 80px 20px 40px; text-align: center; }
-        .hero h1 { font-size: 56px; font-weight: 800; letter-spacing: -2px; margin-bottom: 20px; }
-        .hero p { font-size: 20px; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
-
-        /* APPS GRID */
-        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px 0 100px; }
-        .app-card { background: var(--card-bg); border-radius: 32px; padding: 40px; text-align: center; transition: var(--transition); }
-        .app-card:hover { transform: scale(1.02); background: #f0f0f2; }
-        .app-icon { width: 100px; height: 100px; margin: 0 auto 25px; border-radius: 22px; display: flex; align-items: center; justify-content: center; font-size: 40px; color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .wallpaper-icon { background: linear-gradient(135deg, #FF512F 0%, #DD2476 100%); }
-        .workout-icon { background: linear-gradient(135deg, #1D976C 0%, #93F9B9 100%); }
-        .currency-icon { background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%); }
-        .status { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-top: 15px; }
-        .live { background: #34c759; color: #fff; }
-        .soon { background: #d2d2d7; color: #1d1d1f; }
-
-        /* TERMS PAGE STYLES */
-        .terms-content { padding: 60px 0 100px; max-width: 800px; margin: 0 auto; }
-        .terms-card { background: #fff; padding: 40px; border-radius: 24px; border: 1px solid #eee; }
-        .terms-card h1 { font-size: 32px; margin-bottom: 10px; }
-        .terms-card h2 { font-size: 22px; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #f5f5f7; padding-bottom: 5px; }
-        .terms-card p { margin-bottom: 15px; color: #444; }
-        .terms-card ul { margin-left: 20px; margin-bottom: 20px; }
-        .terms-card li { margin-bottom: 8px; color: #444; }
-        .highlight { background: #fff3e0; padding: 20px; border-radius: 12px; border-left: 5px solid #ff9800; margin: 20px 0; font-size: 15px; }
-        .update-date { color: var(--text-secondary); font-size: 14px; margin-bottom: 30px; display: block; }
-        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--accent-color); text-decoration: none; font-weight: 600; cursor: pointer; }
+        /* CONTENT */
+        .terms-container { max-width: 850px; margin: 60px auto; background: #fff; padding: 50px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        h1 { font-size: 36px; color: var(--text-main); margin-bottom: 10px; letter-spacing: -1px; }
+        .update-date { color: #888; font-size: 14px; margin-bottom: 30px; display: block; }
+        h2 { font-size: 22px; color: var(--text-main); margin-top: 35px; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
+        p { margin-bottom: 18px; font-size: 16px; }
+        ul { margin-left: 25px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+        .highlight { background: #fff3e0; padding: 20px; border-radius: 12px; border-left: 5px solid #ff9800; margin: 25px 0; }
+        a { color: var(--accent-color); text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 20px; font-weight: 600; color: var(--accent-color); }
 
         /* FOOTER */
-        .footer { background: #ffffff; color: var(--text-main); padding: 60px 0; border-top: 1px solid #eee; }
-        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
-        .footer-info p { color: var(--text-secondary); margin-top: 10px; font-size: 14px; }
-        .footer-links h4 { font-size: 14px; margin-bottom: 15px; text-transform: uppercase; color: var(--text-secondary); }
-        .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 8px; }
-        .footer-links a { text-decoration: none; color: var(--text-main); font-size: 14px; transition: var(--transition); cursor: pointer; }
-        .footer-links a:hover { color: var(--accent-color); }
-        .social-icons { display: flex; gap: 15px; margin-top: 10px; }
-        .social-icons a { font-size: 20px; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }
-            .footer-grid { flex-direction: column; text-align: center; }
-            .social-icons { justify-content: center; }
-        }
+        .footer { text-align: center; padding: 40px; color: #888; font-size: 14px; }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header class="header">
         <div class="container">
-            <a onclick="showPage('home')" class="logo">DOVDOV<span>DEV</span></a>
+            <a href="index.html" class="logo">DOVDOV<span>DEV</span></a>
             <nav class="nav">
                 <ul class="nav-links">
-                    <li><a onclick="showPage('home')" data-key="nav-home">Главная</a></li>
-                    <li><a onclick="showPage('home')" data-key="nav-apps">Приложения</a></li>
-                    <li><a onclick="showPage('terms')" data-key="nav-terms">Terms</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="terms.html" style="color: var(--accent-color);">Terms</a></li>
                 </ul>
             </nav>
-            <div class="header-right">
-                <select id="lang-select">
-                    <option value="ru">RU</option>
-                    <option value="en">EN</option>
-                </select>
-            </div>
         </div>
     </header>
 
-    <!-- Home Page -->
-    <div id="home-page" class="page active">
-        <section class="hero">
-            <div class="container">
-                <h1 data-key="hero-title">Создаем лучшие приложения</h1>
-                <p data-key="hero-subtitle">Простота и мощный функционал в каждом нашем продукте.</p>
-            </div>
-        </section>
+    <div class="terms-container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1>Terms of Use</h1>
+        <span class="update-date">Last updated: February 2025</span>
 
-        <main class="container">
-            <div class="apps-grid">
-                <div class="app-card">
-                    <div class="app-icon wallpaper-icon"><i class="fas fa-image"></i></div>
-                    <h3>Wallpaper App</h3>
-                    <p data-key="app-wp-desc">Тысячи 4K обоев для вашего смартфона каждый день.</p>
-                    <span class="status live" data-key="status-live">Доступno</span>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon workout-icon"><i class="fas fa-dumbbell"></i></div>
-                    <h3>Workout App</h3>
-                    <p data-key="app-workout-desc">Ваш персональный тренер прямо в кармане.</p>
-                    <span class="status soon" data-key="status-soon">Скоро</span>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon currency-icon"><i class="fas fa-coins"></i></div>
-                    <h3>Currency App</h3>
-                    <p data-key="app-curr-desc">Быстрый конвертер валют с актуальными курсами.</p>
-                    <span class="status soon" data-key="status-soon">Скоро</span>
-                </div>
-            </div>
-        </main>
-    </div>
+        <p>By downloading, installing, or using the <strong>4K Wallpapers</strong> application ("the App"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use the App.</p>
 
-    <!-- Terms Page -->
-    <div id="terms-page" class="page">
-        <div class="container terms-content">
-            <a onclick="showPage('home')" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-            <div class="terms-card">
-                <h1>Terms of Use</h1>
-                <span class="update-date">Last updated: February 2025</span>
+        <h2>1. Description of Service</h2>
+        <p>4K Wallpapers is a mobile application that allows users to browse, search, download, and set wallpapers and video wallpapers on their Android devices. Content is sourced from third-party APIs including Pixabay and Pexels.</p>
 
-                <p>By downloading, installing, or using the <strong>4K Wallpapers</strong> application ("the App"), you agree to be bound by these Terms of Use.</p>
-
-                <h2>1. Description of Service</h2>
-                <p>4K Wallpapers is a mobile application that allows users to browse, download, and set wallpapers. Content is sourced from Pixabay and Pexels.</p>
-
-                <h2>2. Content Ownership</h2>
-                <div class="highlight">
-                    <strong>Important:</strong> All wallpapers and videos are provided by Pixabay and Pexels APIs. We do not own the image or video content.
-                </div>
-                
-                <h2>3. Premium Subscription</h2>
-                <ul>
-                    <li>Monthly Premium - Recurring monthly</li>
-                    <li>Yearly Premium - Recurring yearly</li>
-                    <li>Lifetime Premium - One-time purchase</li>
-                </ul>
-
-                <h2>4. Contact Us</h2>
-                <p>For questions about these Terms of Use, contact us at:</p>
-                <p><strong>Email:</strong> <a href="mailto:dovdov.apps@gmail.com" style="color:var(--accent-color)">dovdov.apps@gmail.com</a></p>
-                <br>
-                <p><i>Full terms version is available in English as the standard for legal agreements.</i></p>
-            </div>
+        <h2>2. Content Ownership</h2>
+        <div class="highlight">
+            <strong>Important:</strong> All wallpapers and videos are provided by Pixabay and Pexels APIs. We do not own, host, or create any of the image or video content displayed in the App.
         </div>
+        <p>Content is subject to the respective licenses of Pixabay and Pexels.</p>
+
+        <h2>3. Premium Subscription</h2>
+        <p>The App offers premium features through paid subscriptions:</p>
+        <ul>
+            <li><strong>Monthly Premium</strong> - Recurring monthly subscription</li>
+            <li><strong>Yearly Premium</strong> - Recurring yearly subscription</li>
+            <li><strong>Lifetime Premium</strong> - One-time purchase</li>
+        </ul>
+
+        <h2>4. Disclaimer of Warranties</h2>
+        <p>The App is provided "as is" and "as available" without warranties of any kind. We do not warrant that the App will be available at all times without interruption.</p>
+
+        <h2>5. Contact Us</h2>
+        <p>For questions about these Terms of Use, contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:dovdov.apps@gmail.com">dovdov.apps@gmail.com</a></p>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <a onclick="showPage('home')" class="logo">DOVDOV<span>DEV</span></a>
-                    <p>© 2024 Dovdov Dev Inc. <br>Designed for mobile excellence.</p>
-                </div>
-                <div class="footer-links">
-                    <h4 data-key="footer-legal">Legal</h4>
-                    <ul>
-                        <li><a onclick="showPage('terms')">Terms of Use</a></li>
-                        <li><a href="mailto:dovdov.apps@gmail.com">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4 data-key="footer-social">Social</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <p>© 2024 Dovdov Dev. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Page Switching Logic
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-            document.getElementById(pageId + '-page').classList.add('active');
-            window.scrollTo(0,0);
-        }
-
-        // Translation Logic
-        const translations = {
-            ru: {
-                "nav-home": "Главная",
-                "nav-apps": "Приложения",
-                "nav-terms": "Условия",
-                "hero-title": "Создаем лучшие приложения",
-                "hero-subtitle": "Простота и мощный функционал в каждом нашем продукте.",
-                "app-wp-desc": "Тысячи 4K обоев для вашего смартфона каждый день.",
-                "app-workout-desc": "Ваш персональный тренер прямо в кармане.",
-                "app-curr-desc": "Быстрый конвертер валют с актуальными курсами.",
-                "status-live": "Доступно",
-                "status-soon": "Скоро",
-                "footer-legal": "Правовая информация",
-                "footer-social": "Мы в соцсетях"
-            },
-            en: {
-                "nav-home": "Home",
-                "nav-apps": "Apps",
-                "nav-terms": "Terms",
-                "hero-title": "Crafting Best Experience",
-                "hero-subtitle": "Simplicity and powerful functionality in every product.",
-                "app-wp-desc": "Thousands of 4K wallpapers for your smartphone every day.",
-                "app-workout-desc": "Your personal fitness coach right in your pocket.",
-                "app-curr-desc": "Fast currency converter with real-time rates.",
-                "status-live": "Available",
-                "status-soon": "Coming Soon",
-                "footer-legal": "Legal",
-                "footer-social": "Social Media"
-            }
-        };
-
-        const langSelect = document.getElementById('lang-select');
-        langSelect.addEventListener('change', (e) => setLanguage(e.target.value));
-
-        function setLanguage(lang) {
-            document.querySelectorAll('[data-key]').forEach(element => {
-                const key = element.getAttribute('data-key');
-                if (translations[lang][key]) element.textContent = translations[lang][key];
-            });
-            document.documentElement.lang = lang;
-        }
-    </script>
 </body>
 </html>
