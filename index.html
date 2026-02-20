@@ -4,15 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Studio - Wallpaper, Workout, Currency</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome (Ikonkalar uchun) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* CSS DIZAYN (Wylsa va Voodoo uslubida) */
+        :root {
+            --primary-color: #000;
+            --accent-color: #ff3e3e; /* Wylsa uslubidagi qizil */
+            --bg-color: #ffffff;
+            --card-bg: #f5f5f7;
+            --text-main: #1d1d1f;
+            --transition: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER (Wylsa.com style) */
+        .header {
+            height: 64px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 24px;
+            letter-spacing: -1px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #lang-select {
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* HERO SECTION (Voodoo style) */
+        .hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #86868b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* APPS GRID (Voodoo.io style) */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 0 100px;
+        }
+
+        .app-card {
+            background: var(--card-bg);
+            border-radius: 32px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-card:hover {
+            transform: scale(1.03);
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 25px;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .wallpaper-icon { background: linear-gradient(135deg, #FF512F 0%, #DD2476 100%); }
+        .workout-icon { background: linear-gradient(135deg, #1D976C 0%, #93F9B9 100%); }
+        .currency-icon { background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%); }
+
+        .app-info h3 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .app-info p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 25px;
+            height: 50px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .live { background: #34c759; color: #fff; }
+        .soon { background: #d2d2d7; color: #1d1d1f; }
+
+        /* FOOTER (Wylsa style) */
+        .footer {
+            background: #000;
+            color: #fff;
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-info .logo { color: #fff; }
+        .footer-info p { color: #86868b; margin-top: 15px; font-size: 14px; }
+
+        .footer-social h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Mobil qurilmalar uchun moslashuv */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 40px; }
+            .nav-links { display: none; }
+            .footer-grid { flex-direction: column; text-align: center; align-items: center; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header (Wylsa style) -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="logo">APP<span>STUDIO</span></div>
+            <a href="#" class="logo">APP<span>STUDIO</span></a>
             <nav class="nav">
                 <ul class="nav-links">
                     <li><a href="#" data-key="nav-home">Главная</a></li>
@@ -25,68 +255,69 @@
                     <option value="ru">RU</option>
                     <option value="en">EN</option>
                 </select>
-                <button class="search-btn"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section (Voodoo style) -->
+    <!-- Hero -->
     <section class="hero">
-        <h1 data-key="hero-title">Создаем лучшие мобильные приложения</h1>
-        <p data-key="hero-subtitle">Простота и функциональность в каждом пикселе.</p>
+        <div class="container">
+            <h1 data-key="hero-title">Создаем лучшие приложения</h1>
+            <p data-key="hero-subtitle">Простота и мощный функционал в каждом нашем продукте.</p>
+        </div>
     </section>
 
-    <!-- Apps Grid (Voodoo style) -->
+    <!-- Apps Grid -->
     <main class="container">
         <div class="apps-grid">
-            <!-- Wallpaper App (Tayyor) -->
+            <!-- Wallpaper App (Live) -->
             <div class="app-card">
                 <div class="app-icon wallpaper-icon">
                     <i class="fas fa-image"></i>
                 </div>
                 <div class="app-info">
                     <h3>Wallpaper App</h3>
-                    <p data-key="app-wp-desc">Тысячи качественных обоев для вашего смартфона.</p>
+                    <p data-key="app-wp-desc">Тысячи 4K обоев для вашего смартфона каждый день.</p>
                     <span class="status live" data-key="status-live">Доступно</span>
                 </div>
             </div>
 
-            <!-- Workout App (Yaqinda) -->
+            <!-- Workout App (Soon) -->
             <div class="app-card">
                 <div class="app-icon workout-icon">
                     <i class="fas fa-dumbbell"></i>
                 </div>
                 <div class="app-info">
                     <h3>Workout App</h3>
-                    <p data-key="app-workout-desc">Персональные тренировки и фитнес-планы.</p>
+                    <p data-key="app-workout-desc">Ваш персональный тренер прямо в кармане.</p>
                     <span class="status soon" data-key="status-soon">Скоро</span>
                 </div>
             </div>
 
-            <!-- Currency App (Yaqinda) -->
+            <!-- Currency App (Soon) -->
             <div class="app-card">
                 <div class="app-icon currency-icon">
                     <i class="fas fa-coins"></i>
                 </div>
                 <div class="app-info">
                     <h3>Currency App</h3>
-                    <p data-key="app-curr-desc">Актуальные курсы валют и удобный конвертер.</p>
+                    <p data-key="app-curr-desc">Быстрый конвертер валют с актуальными курсами.</p>
                     <span class="status soon" data-key="status-soon">Скоро</span>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer (Wylsa style) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <div class="logo">APP<span>STUDIO</span></div>
-                    <p>© 2024. Все права защищены.</p>
+                    <a href="#" class="logo">APP<span>STUDIO</span></a>
+                    <p>© 2024 App Studio Inc. <br>Designed for mobile excellence.</p>
                 </div>
-                <div class="footer-links">
-                    <h4 data-key="footer-social">Социальные сети</h4>
+                <div class="footer-social">
+                    <h4 data-key="footer-social">Мы в соцсетях</h4>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-telegram"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -97,6 +328,53 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JavaScript (Ko'p tillilik funksiyasi) -->
+    <script>
+        const translations = {
+            ru: {
+                "nav-home": "Главная",
+                "nav-apps": "Приложения",
+                "nav-about": "О нас",
+                "hero-title": "Создаем лучшие приложения",
+                "hero-subtitle": "Простота и мощный функционал в каждом нашем продукте.",
+                "app-wp-desc": "Тысячи 4K обоев для вашего смартфона каждый день.",
+                "app-workout-desc": "Ваш персональный тренер прямо в кармане.",
+                "app-curr-desc": "Быстрый конвертер валют с актуальными курсами.",
+                "status-live": "Доступно",
+                "status-soon": "Скоро",
+                "footer-social": "Мы в соцсетях"
+            },
+            en: {
+                "nav-home": "Home",
+                "nav-apps": "Apps",
+                "nav-about": "About",
+                "hero-title": "Crafting Best Experience",
+                "hero-subtitle": "Simplicity and powerful functionality in every product.",
+                "app-wp-desc": "Thousands of 4K wallpapers for your smartphone every day.",
+                "app-workout-desc": "Your personal fitness coach right in your pocket.",
+                "app-curr-desc": "Fast currency converter with real-time rates.",
+                "status-live": "Available",
+                "status-soon": "Coming Soon",
+                "footer-social": "Social Media"
+            }
+        };
+
+        const langSelect = document.getElementById('lang-select');
+
+        langSelect.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            setLanguage(lang);
+        });
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+    </script>
 </body>
 </html>
