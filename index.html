@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* CSS DIZAYN (Wylsa va Voodoo uslubida) */
+        /* CSS DIZAYN */
         :root {
             --primary-color: #000;
-            --accent-color: #ff3e3e; /* Wylsa uslubidagi qizil */
+            --accent-color: #ff3e3e; 
             --bg-color: #ffffff;
             --card-bg: #f5f5f7;
             --text-main: #1d1d1f;
+            --text-secondary: #86868b;
             --transition: 0.3s ease;
         }
 
@@ -87,12 +88,6 @@
             color: var(--accent-color);
         }
 
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
         #lang-select {
             border: 1px solid #ddd;
             background: #fff;
@@ -103,7 +98,7 @@
             outline: none;
         }
 
-        /* HERO SECTION (Voodoo style) */
+        /* HERO SECTION */
         .hero {
             padding: 100px 20px 60px;
             text-align: center;
@@ -119,7 +114,7 @@
 
         .hero p {
             font-size: 20px;
-            color: #86868b;
+            color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -139,8 +134,6 @@
             text-align: center;
             transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
         }
 
         .app-card:hover {
@@ -164,18 +157,8 @@
         .workout-icon { background: linear-gradient(135deg, #1D976C 0%, #93F9B9 100%); }
         .currency-icon { background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%); }
 
-        .app-info h3 {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .app-info p {
-            color: #666;
-            font-size: 16px;
-            margin-bottom: 25px;
-            height: 50px;
-        }
+        .app-info h3 { font-size: 26px; font-weight: 700; margin-bottom: 12px; }
+        .app-info p { color: #666; font-size: 16px; margin-bottom: 25px; height: 50px; }
 
         .status {
             display: inline-block;
@@ -189,11 +172,12 @@
         .live { background: #34c759; color: #fff; }
         .soon { background: #d2d2d7; color: #1d1d1f; }
 
-        /* FOOTER (Wylsa style) */
+        /* FOOTER (OQ RANGDA) */
         .footer {
-            background: #000;
-            color: #fff;
-            padding: 80px 0 40px;
+            background: #ffffff; /* Oq rang */
+            color: var(--text-main);
+            padding: 60px 0;
+            border-top: 1px solid #eee; /* Yuqori chiziq */
         }
 
         .footer-grid {
@@ -204,14 +188,18 @@
             gap: 40px;
         }
 
-        .footer-info .logo { color: #fff; }
-        .footer-info p { color: #86868b; margin-top: 15px; font-size: 14px; }
+        .footer-info p { 
+            color: var(--text-secondary); 
+            margin-top: 15px; 
+            font-size: 14px; 
+        }
 
         .footer-social h4 {
-            font-size: 16px;
+            font-size: 14px;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: var(--text-secondary);
         }
 
         .social-icons {
@@ -220,8 +208,8 @@
         }
 
         .social-icons a {
-            color: #fff;
-            font-size: 24px;
+            color: var(--text-main);
+            font-size: 22px;
             transition: var(--transition);
         }
 
@@ -229,7 +217,6 @@
             color: var(--accent-color);
         }
 
-        /* Mobil qurilmalar uchun moslashuv */
         @media (max-width: 768px) {
             .hero h1 { font-size: 40px; }
             .nav-links { display: none; }
@@ -270,7 +257,6 @@
     <!-- Apps Grid -->
     <main class="container">
         <div class="apps-grid">
-            <!-- Wallpaper App (Live) -->
             <div class="app-card">
                 <div class="app-icon wallpaper-icon">
                     <i class="fas fa-image"></i>
@@ -282,7 +268,6 @@
                 </div>
             </div>
 
-            <!-- Workout App (Soon) -->
             <div class="app-card">
                 <div class="app-icon workout-icon">
                     <i class="fas fa-dumbbell"></i>
@@ -294,7 +279,6 @@
                 </div>
             </div>
 
-            <!-- Currency App (Soon) -->
             <div class="app-card">
                 <div class="app-icon currency-icon">
                     <i class="fas fa-coins"></i>
@@ -328,7 +312,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript (Ko'p tillilik funksiyasi) -->
     <script>
         const translations = {
             ru: {
@@ -360,10 +343,8 @@
         };
 
         const langSelect = document.getElementById('lang-select');
-
         langSelect.addEventListener('change', (e) => {
-            const lang = e.target.value;
-            setLanguage(lang);
+            setLanguage(e.target.value);
         });
 
         function setLanguage(lang) {
