@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dovdov Dev - Wallpaper, Workout, Currency</title>
-    <!-- Font Awesome (Ikonkalar uchun) -->
+    <title>Dovdov Dev - Apps & Terms</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* CSS DIZAYN */
         :root {
             --primary-color: #000;
             --accent-color: #ff3e3e; 
@@ -16,29 +15,16 @@
             --card-bg: #f5f5f7;
             --text-main: #1d1d1f;
             --text-secondary: #86868b;
-            --transition: 0.3s ease;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* HEADER (Wylsa.com style) */
+        /* HEADER */
         .header {
             height: 64px;
             background: rgba(255, 255, 255, 0.8);
@@ -51,177 +37,68 @@
             align-items: center;
         }
 
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
+        .header .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 
-        .logo {
-            font-weight: 900;
-            font-size: 22px;
-            letter-spacing: -1px;
-            text-decoration: none;
-            color: #000;
-            text-transform: uppercase;
-        }
+        .logo { font-weight: 900; font-size: 22px; letter-spacing: -1px; text-decoration: none; color: #000; text-transform: uppercase; cursor: pointer; }
+        .logo span { color: var(--accent-color); }
 
-        .logo span {
-            color: var(--accent-color);
-        }
+        .nav-links { list-style: none; display: flex; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; font-size: 14px; transition: var(--transition); cursor: pointer; }
+        .nav-links a:hover { color: var(--accent-color); }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
+        #lang-select { border: 1px solid #ddd; background: #fff; padding: 4px 8px; border-radius: 6px; font-size: 12px; cursor: pointer; }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            font-size: 14px;
-            transition: var(--transition);
-        }
+        /* PAGES LOGIC */
+        .page { display: none; animation: fadeIn 0.5s ease; }
+        .page.active { display: block; }
 
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        #lang-select {
-            border: 1px solid #ddd;
-            background: #fff;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 12px;
-            cursor: pointer;
-            outline: none;
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         /* HERO SECTION */
-        .hero {
-            padding: 100px 20px 60px;
-            text-align: center;
-        }
+        .hero { padding: 80px 20px 40px; text-align: center; }
+        .hero h1 { font-size: 56px; font-weight: 800; letter-spacing: -2px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
 
-        .hero h1 {
-            font-size: 56px;
-            font-weight: 800;
-            letter-spacing: -2px;
-            margin-bottom: 20px;
-            color: #000;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* APPS GRID (Voodoo.io style) */
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 40px 0 100px;
-        }
-
-        .app-card {
-            background: var(--card-bg);
-            border-radius: 32px;
-            padding: 40px;
-            text-align: center;
-            transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
-            cursor: pointer;
-        }
-
-        .app-card:hover {
-            transform: scale(1.03);
-        }
-
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 25px;
-            border-radius: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            color: white;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
+        /* APPS GRID */
+        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px 0 100px; }
+        .app-card { background: var(--card-bg); border-radius: 32px; padding: 40px; text-align: center; transition: var(--transition); }
+        .app-card:hover { transform: scale(1.02); background: #f0f0f2; }
+        .app-icon { width: 100px; height: 100px; margin: 0 auto 25px; border-radius: 22px; display: flex; align-items: center; justify-content: center; font-size: 40px; color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
         .wallpaper-icon { background: linear-gradient(135deg, #FF512F 0%, #DD2476 100%); }
         .workout-icon { background: linear-gradient(135deg, #1D976C 0%, #93F9B9 100%); }
         .currency-icon { background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%); }
-
-        .app-info h3 { font-size: 26px; font-weight: 700; margin-bottom: 12px; }
-        .app-info p { color: #666; font-size: 16px; margin-bottom: 25px; height: 50px; }
-
-        .status {
-            display: inline-block;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
+        .status { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-top: 15px; }
         .live { background: #34c759; color: #fff; }
         .soon { background: #d2d2d7; color: #1d1d1f; }
 
+        /* TERMS PAGE STYLES */
+        .terms-content { padding: 60px 0 100px; max-width: 800px; margin: 0 auto; }
+        .terms-card { background: #fff; padding: 40px; border-radius: 24px; border: 1px solid #eee; }
+        .terms-card h1 { font-size: 32px; margin-bottom: 10px; }
+        .terms-card h2 { font-size: 22px; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #f5f5f7; padding-bottom: 5px; }
+        .terms-card p { margin-bottom: 15px; color: #444; }
+        .terms-card ul { margin-left: 20px; margin-bottom: 20px; }
+        .terms-card li { margin-bottom: 8px; color: #444; }
+        .highlight { background: #fff3e0; padding: 20px; border-radius: 12px; border-left: 5px solid #ff9800; margin: 20px 0; font-size: 15px; }
+        .update-date { color: var(--text-secondary); font-size: 14px; margin-bottom: 30px; display: block; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--accent-color); text-decoration: none; font-weight: 600; cursor: pointer; }
+
         /* FOOTER */
-        .footer {
-            background: #ffffff;
-            color: var(--text-main);
-            padding: 60px 0;
-            border-top: 1px solid #eee;
-        }
-
-        .footer-grid {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .footer-info p { 
-            color: var(--text-secondary); 
-            margin-top: 15px; 
-            font-size: 14px; 
-        }
-
-        .footer-social h4 {
-            font-size: 14px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-secondary);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 20px;
-        }
-
-        .social-icons a {
-            color: var(--text-main);
-            font-size: 22px;
-            transition: var(--transition);
-        }
-
-        .social-icons a:hover {
-            color: var(--accent-color);
-        }
+        .footer { background: #ffffff; color: var(--text-main); padding: 60px 0; border-top: 1px solid #eee; }
+        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+        .footer-info p { color: var(--text-secondary); margin-top: 10px; font-size: 14px; }
+        .footer-links h4 { font-size: 14px; margin-bottom: 15px; text-transform: uppercase; color: var(--text-secondary); }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { text-decoration: none; color: var(--text-main); font-size: 14px; transition: var(--transition); cursor: pointer; }
+        .footer-links a:hover { color: var(--accent-color); }
+        .social-icons { display: flex; gap: 15px; margin-top: 10px; }
+        .social-icons a { font-size: 20px; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 40px; }
-            .nav-links { display: none; }
-            .footer-grid { flex-direction: column; text-align: center; align-items: center; }
+            .hero h1 { font-size: 36px; }
+            .footer-grid { flex-direction: column; text-align: center; }
+            .social-icons { justify-content: center; }
         }
     </style>
 </head>
@@ -230,12 +107,12 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <a href="#" class="logo">DOVDOV<span>DEV</span></a>
+            <a onclick="showPage('home')" class="logo">DOVDOV<span>DEV</span></a>
             <nav class="nav">
                 <ul class="nav-links">
-                    <li><a href="#" data-key="nav-home">Главная</a></li>
-                    <li><a href="#" data-key="nav-apps">Приложения</a></li>
-                    <li><a href="#" data-key="nav-about">О нас</a></li>
+                    <li><a onclick="showPage('home')" data-key="nav-home">Главная</a></li>
+                    <li><a onclick="showPage('home')" data-key="nav-apps">Приложения</a></li>
+                    <li><a onclick="showPage('terms')" data-key="nav-terms">Terms</a></li>
                 </ul>
             </nav>
             <div class="header-right">
@@ -247,62 +124,90 @@
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1 data-key="hero-title">Создаем лучшие приложения</h1>
-            <p data-key="hero-subtitle">Простота и мощный функционал в каждом нашем продукте.</p>
-        </div>
-    </section>
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <section class="hero">
+            <div class="container">
+                <h1 data-key="hero-title">Создаем лучшие приложения</h1>
+                <p data-key="hero-subtitle">Простота и мощный функционал в каждом нашем продукте.</p>
+            </div>
+        </section>
 
-    <!-- Apps Grid -->
-    <main class="container">
-        <div class="apps-grid">
-            <div class="app-card">
-                <div class="app-icon wallpaper-icon">
-                    <i class="fas fa-image"></i>
-                </div>
-                <div class="app-info">
+        <main class="container">
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-icon wallpaper-icon"><i class="fas fa-image"></i></div>
                     <h3>Wallpaper App</h3>
                     <p data-key="app-wp-desc">Тысячи 4K обоев для вашего смартфона каждый день.</p>
-                    <span class="status live" data-key="status-live">Доступно</span>
+                    <span class="status live" data-key="status-live">Доступno</span>
                 </div>
-            </div>
-
-            <div class="app-card">
-                <div class="app-icon workout-icon">
-                    <i class="fas fa-dumbbell"></i>
-                </div>
-                <div class="app-info">
+                <div class="app-card">
+                    <div class="app-icon workout-icon"><i class="fas fa-dumbbell"></i></div>
                     <h3>Workout App</h3>
                     <p data-key="app-workout-desc">Ваш персональный тренер прямо в кармане.</p>
                     <span class="status soon" data-key="status-soon">Скоро</span>
                 </div>
-            </div>
-
-            <div class="app-card">
-                <div class="app-icon currency-icon">
-                    <i class="fas fa-coins"></i>
-                </div>
-                <div class="app-info">
+                <div class="app-card">
+                    <div class="app-icon currency-icon"><i class="fas fa-coins"></i></div>
                     <h3>Currency App</h3>
                     <p data-key="app-curr-desc">Быстрый конвертер валют с актуальными курсами.</p>
                     <span class="status soon" data-key="status-soon">Скоро</span>
                 </div>
             </div>
+        </main>
+    </div>
+
+    <!-- Terms Page -->
+    <div id="terms-page" class="page">
+        <div class="container terms-content">
+            <a onclick="showPage('home')" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="terms-card">
+                <h1>Terms of Use</h1>
+                <span class="update-date">Last updated: February 2025</span>
+
+                <p>By downloading, installing, or using the <strong>4K Wallpapers</strong> application ("the App"), you agree to be bound by these Terms of Use.</p>
+
+                <h2>1. Description of Service</h2>
+                <p>4K Wallpapers is a mobile application that allows users to browse, download, and set wallpapers. Content is sourced from Pixabay and Pexels.</p>
+
+                <h2>2. Content Ownership</h2>
+                <div class="highlight">
+                    <strong>Important:</strong> All wallpapers and videos are provided by Pixabay and Pexels APIs. We do not own the image or video content.
+                </div>
+                
+                <h2>3. Premium Subscription</h2>
+                <ul>
+                    <li>Monthly Premium - Recurring monthly</li>
+                    <li>Yearly Premium - Recurring yearly</li>
+                    <li>Lifetime Premium - One-time purchase</li>
+                </ul>
+
+                <h2>4. Contact Us</h2>
+                <p>For questions about these Terms of Use, contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:dovdov.apps@gmail.com" style="color:var(--accent-color)">dovdov.apps@gmail.com</a></p>
+                <br>
+                <p><i>Full terms version is available in English as the standard for legal agreements.</i></p>
+            </div>
         </div>
-    </main>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <a href="#" class="logo">DOVDOV<span>DEV</span></a>
+                    <a onclick="showPage('home')" class="logo">DOVDOV<span>DEV</span></a>
                     <p>© 2024 Dovdov Dev Inc. <br>Designed for mobile excellence.</p>
                 </div>
-                <div class="footer-social">
-                    <h4 data-key="footer-social">Мы в соцсетях</h4>
+                <div class="footer-links">
+                    <h4 data-key="footer-legal">Legal</h4>
+                    <ul>
+                        <li><a onclick="showPage('terms')">Terms of Use</a></li>
+                        <li><a href="mailto:dovdov.apps@gmail.com">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-key="footer-social">Social</h4>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-telegram"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -314,11 +219,19 @@
     </footer>
 
     <script>
+        // Page Switching Logic
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId + '-page').classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        // Translation Logic
         const translations = {
             ru: {
                 "nav-home": "Главная",
                 "nav-apps": "Приложения",
-                "nav-about": "О нас",
+                "nav-terms": "Условия",
                 "hero-title": "Создаем лучшие приложения",
                 "hero-subtitle": "Простота и мощный функционал в каждом нашем продукте.",
                 "app-wp-desc": "Тысячи 4K обоев для вашего смартфона каждый день.",
@@ -326,12 +239,13 @@
                 "app-curr-desc": "Быстрый конвертер валют с актуальными курсами.",
                 "status-live": "Доступно",
                 "status-soon": "Скоро",
+                "footer-legal": "Правовая информация",
                 "footer-social": "Мы в соцсетях"
             },
             en: {
                 "nav-home": "Home",
                 "nav-apps": "Apps",
-                "nav-about": "About",
+                "nav-terms": "Terms",
                 "hero-title": "Crafting Best Experience",
                 "hero-subtitle": "Simplicity and powerful functionality in every product.",
                 "app-wp-desc": "Thousands of 4K wallpapers for your smartphone every day.",
@@ -339,21 +253,18 @@
                 "app-curr-desc": "Fast currency converter with real-time rates.",
                 "status-live": "Available",
                 "status-soon": "Coming Soon",
+                "footer-legal": "Legal",
                 "footer-social": "Social Media"
             }
         };
 
         const langSelect = document.getElementById('lang-select');
-        langSelect.addEventListener('change', (e) => {
-            setLanguage(e.target.value);
-        });
+        langSelect.addEventListener('change', (e) => setLanguage(e.target.value));
 
         function setLanguage(lang) {
             document.querySelectorAll('[data-key]').forEach(element => {
                 const key = element.getAttribute('data-key');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
+                if (translations[lang][key]) element.textContent = translations[lang][key];
             });
             document.documentElement.lang = lang;
         }
