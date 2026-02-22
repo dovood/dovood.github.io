@@ -11,8 +11,10 @@ import {
   Rocket, 
   ExternalLink, 
   Github, 
-  Twitter, 
+  Instagram,
+  Send,
   Mail,
+  Youtube,
   ChevronRight,
   Play,
   X
@@ -28,76 +30,134 @@ export default function App() {
       navAbout: "About",
       navContact: "Contact",
       playMarket: "Play Market",
-      heroTitle: "PROJECT",
-      heroSubtitle: "ZONE.",
-      heroDesc: "dovdov.dev is a small studio creating modern and useful mobile applications. Our goal is to provide the best experience for users.",
-      viewApps: "View Apps",
+      heroTitle: "4K",
+      heroSubtitle: "WALLPAPERS.",
+      heroDesc: "HD & Live Wallpapers for your device. Discover a vast collection of stunning backgrounds provided by Pixabay and Pexels.",
+      viewApps: "View Collection",
       aboutUs: "About Us",
-      ourApps: "Our Apps",
-      appsDesc: "Check out our current and upcoming projects.",
-      ready: "Ready",
-      soon: "Soon",
-      viewOnPlay: "View on Play Market",
-      statsApps: "Apps",
-      statsNew: "New projects",
-      statsQuality: "Quality guarantee",
-      aboutDesc: "We approach every app like a work of art. The perfect harmony of design and functionality is our core principle.",
-      feature1: "Minimalist design",
-      feature2: "High performance",
-      feature3: "User convenience",
+      ourApps: "Our Features",
+      appsDesc: "Explore what our app offers to make your device look amazing.",
+      ready: "Available",
+      soon: "Coming Soon",
+      viewOnPlay: "Get it on Google Play",
+      statsApps: "Wallpapers",
+      statsNew: "Live Backgrounds",
+      statsQuality: "4K Quality",
+      aboutDesc: "We provide high-quality visual content through powerful APIs. Our app is designed for speed, beauty, and user convenience.",
+      feature1: "Daily Updates",
+      feature2: "Live Wallpapers",
+      feature3: "Easy to Use",
+      feature4: "Battery Friendly",
+      feature5: "4K Resolution",
+      feature6: "Auto Changer",
+      reviewsTitle: "What Users Say",
+      review1: "The best wallpaper app I've ever used. The quality is insane!",
+      review2: "Live wallpapers are so smooth. My phone looks brand new.",
+      review3: "Simple and fast. Exactly what I was looking for.",
+      howItWorks: "How it Works",
+      step1Title: "Browse",
+      step1Desc: "Explore thousands of 4K wallpapers across various categories.",
+      step2Title: "Preview",
+      step2Desc: "See how the wallpaper looks on your home and lock screen.",
+      step3Title: "Apply",
+      step3Desc: "Set your favorite background with just one tap.",
+      faqTitle: "FAQ",
+      faq1Q: "Is the app free?",
+      faq1A: "Yes, the app is free to download and use with ads. We also offer a premium subscription for an ad-free experience.",
+      faq2Q: "Where do the wallpapers come from?",
+      faq2A: "Our wallpapers are provided by Pixabay and Pexels APIs, ensuring a vast and high-quality collection.",
+      faq3Q: "Do you have live wallpapers?",
+      faq3A: "Yes! We have a dedicated section for dynamic video backgrounds.",
       contactTitle: "GET IN",
       contactSubtitle: "TOUCH.",
-      contactDesc: "Have questions or suggestions? We are always ready for communication.",
+      contactDesc: "Have questions or suggestions? Contact our support team.",
+      footerDesc: "High-quality wallpapers and live backgrounds for your mobile device.",
+      footerAbout: "About",
+      footerEditorial: "Editorial",
+      footerAdvertising: "Advertising",
+      footerApps: "Apps",
+      footerIOS: "iOS",
+      footerAppleTV: "Apple TV",
+      footerAndroid: "Android",
       privacy: "Privacy Policy",
-      terms: "Terms of Service",
+      terms: "Terms of Use",
       rights: "All rights reserved.",
       understand: "Got it",
-      privacyContent: "dovdov.dev respects user privacy. We do not sell or share your personal information with unauthorized third parties. Our apps only collect minimal data necessary to improve service quality.",
-      termsContent: "By using dovdov.dev services, you agree to these terms. Our apps are provided 'as is' and we are not responsible for any damage resulting from their use.",
-      wallpaperTitle: "Wallpaper App",
-      wallpaperDesc: "A collection of high-quality and beautiful wallpapers. Refresh your device.",
-      app2Title: "Coming Soon",
-      app2Desc: "We are working on a new innovative app. Coming soon to Play Market.",
-      app3Title: "Coming Soon",
-      app3Desc: "Another great project that will make your daily life easier."
+      privacyContent: "Welcome to 4K Wallpapers. We are committed to protecting your privacy. This policy explains how we handle your data.",
+      termsContent: "By using 4K Wallpapers, you agree to these terms. Please read them carefully.",
+      wallpaperTitle: "4K Wallpapers",
+      wallpaperDesc: "Thousands of high-definition images for your home and lock screen.",
+      app2Title: "Live Video",
+      app2Desc: "Dynamic video backgrounds that bring your phone to life.",
+      app3Title: "Premium",
+      app3Desc: "Ad-free experience with exclusive high-resolution content."
     },
     ru: {
       navApps: "Приложения",
       navAbout: "О нас",
       navContact: "Контакты",
       playMarket: "Play Market",
-      heroTitle: "СФЕРА",
-      heroSubtitle: "ПРОЕКТОВ.",
-      heroDesc: "dovdov.dev — это небольшая студия, создающая современные и полезные мобильные приложения. Наша цель — предоставить пользователям лучший опыт.",
-      viewApps: "Посмотреть приложения",
+      heroTitle: "4K",
+      heroSubtitle: "ОБОИ.",
+      heroDesc: "HD и живые обои для вашего устройства. Откройте для себя огромную коллекцию потрясающих фонов от Pixabay и Pexels.",
+      viewApps: "Посмотреть коллекцию",
       aboutUs: "О нас",
-      ourApps: "Наши приложения",
-      appsDesc: "Ознакомьтесь с нашими текущими и предстоящими проектами.",
-      ready: "Готово",
+      ourApps: "Наши возможности",
+      appsDesc: "Узнайте, что предлагает наше приложение, чтобы ваш девайс выглядел потрясающе.",
+      ready: "Доступно",
       soon: "Скоро",
-      viewOnPlay: "Смотреть в Play Market",
-      statsApps: "Приложения",
-      statsNew: "Новых проекта",
-      statsQuality: "Гарантия качества",
-      aboutDesc: "Мы подходим к каждому приложению как к произведению искусства. Идеальная гармония дизайна и функциональности — наш основной принцип.",
-      feature1: "Минималистичный дизайн",
-      feature2: "Быстрая работа",
-      feature3: "Удобство пользователя",
+      viewOnPlay: "Скачать в Google Play",
+      statsApps: "Обои",
+      statsNew: "Живые фоны",
+      statsQuality: "4K Качество",
+      aboutDesc: "Мы предоставляем высококачественный визуальный контент через мощные API. Наше приложение создано для скорости, красоты и удобства.",
+      feature1: "Ежедневные обновления",
+      feature2: "Живые обои",
+      feature3: "Легко использовать",
+      feature4: "Экономия заряда",
+      feature5: "4K Разрешение",
+      feature6: "Автосмена",
+      reviewsTitle: "Что говорят пользователи",
+      review1: "Лучшее приложение для обоев. Качество просто безумное!",
+      review2: "Живые обои очень плавные. Телефон выглядит как новый.",
+      review3: "Просто и быстро. Именно то, что я искал.",
+      howItWorks: "Как это работает",
+      step1Title: "Просмотр",
+      step1Desc: "Исследуйте тысячи 4K обоев в различных категориях.",
+      step2Title: "Предпросмотр",
+      step2Desc: "Посмотрите, как обои выглядят на вашем экране.",
+      step3Title: "Применить",
+      step3Desc: "Установите любимый фон одним нажатием.",
+      faqTitle: "Частые вопросы",
+      faq1Q: "Приложение бесплатное?",
+      faq1A: "Да, приложение можно скачать бесплатно. Мы также предлагаем премиум-подписку без рекламы.",
+      faq2Q: "Откуда берутся обои?",
+      faq2A: "Наши обои предоставляются через Pixabay и Pexels API, что гарантирует качество.",
+      faq3Q: "Есть ли живые обои?",
+      faq3A: "Да! У нас есть специальный раздел для динамических видео-фонов.",
       contactTitle: "СВЯЖИТЕСЬ",
       contactSubtitle: "С НАМИ.",
-      contactDesc: "Есть вопросы или предложения? Мы всегда готовы к общению.",
+      contactDesc: "Есть вопросы или предложения? Свяжитесь с нашей службой поддержки.",
+      footerDesc: "Высококачественные обои и живые фоны для вашего мобильного устройства.",
+      footerAbout: "О проекте",
+      footerEditorial: "Редакция",
+      footerAdvertising: "Реклама",
+      footerApps: "Приложения",
+      footerIOS: "iOS",
+      footerAppleTV: "Apple TV",
+      footerAndroid: "Android",
       privacy: "Политика конфиденциальности",
       terms: "Условия использования",
       rights: "Все права защищены.",
       understand: "Понятно",
-      privacyContent: "dovdov.dev уважает конфиденциальность пользователей. Мы не продаем и не передаем вашу личную информацию неавторизованным третьим лицам. Наши приложения собирают только минимальные данные, необходимые для улучшения качества обслуживания.",
-      termsContent: "Используя услуги dovdov.dev, вы соглашаетесь с этими условиями. Наши приложения предоставляются 'как есть', и мы не несем ответственности за любой ущерб, возникший в результате их использования.",
-      wallpaperTitle: "Wallpaper App",
-      wallpaperDesc: "Коллекция высококачественных и красивых обоев. Обновите свое устройство.",
-      app2Title: "Скоро",
-      app2Desc: "Мы работаем над новым инновационным приложением. Скоро в Play Market.",
-      app3Title: "Скоро",
-      app3Desc: "Еще один отличный проект, который облегчит вашу повседневную жизнь."
+      privacyContent: "Добро пожаловать в 4K Wallpapers. Мы стремимся защищать вашу конфиденциальность. Эта политика объясняет, как мы обрабатываем ваши данные.",
+      termsContent: "Используя 4K Wallpapers, вы соглашаетесь с этими условиями. Пожалуйста, прочтите их внимательно.",
+      wallpaperTitle: "4K Обои",
+      wallpaperDesc: "Тысячи изображений высокой четкости для вашего экрана.",
+      app2Title: "Живое видео",
+      app2Desc: "Динамические видео-фоны, которые оживляют ваш телефон.",
+      app3Title: "Премиум",
+      app3Desc: "Без рекламы и с эксклюзивным контентом высокого разрешения."
     }
   };
 
@@ -179,8 +239,12 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="pt-40 pb-20 px-6">
-          <div className="max-w-7xl mx-auto">
+        <section className="pt-40 pb-20 px-6 relative overflow-hidden">
+          {/* Background Blobs */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse delay-700" />
+          
+          <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -300,121 +364,235 @@ export default function App() {
           </div>
         </section>
 
-        {/* About / Stats */}
+        {/* About / Bento Grid Features */}
         <section id="about" className="py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
-              <div className="order-2 lg:order-1">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="p-8 bg-zinc-50 rounded-3xl border border-black/5">
-                    <div className="text-4xl font-black mb-2">1+</div>
-                    <div className="text-sm text-zinc-500 font-bold uppercase tracking-wider">{t[lang].statsApps}</div>
-                  </div>
-                  <div className="p-8 bg-blue-600 text-white rounded-3xl">
-                    <div className="text-4xl font-black mb-2">2</div>
-                    <div className="text-sm text-blue-100 font-bold uppercase tracking-wider">{t[lang].statsNew}</div>
-                  </div>
-                  <div className="p-8 bg-black text-white rounded-3xl col-span-2">
-                    <div className="text-4xl font-black mb-2">100%</div>
-                    <div className="text-sm text-zinc-400 font-bold uppercase tracking-wider">{t[lang].statsQuality}</div>
-                  </div>
-                </div>
-              </div>
-              <div className="order-1 lg:order-2">
+            <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
+              <div>
                 <h2 className="text-4xl font-black tracking-tight mb-8 uppercase">{t[lang].aboutUs}</h2>
-                <p className="text-xl text-zinc-500 leading-relaxed mb-8">
+                <p className="text-xl text-zinc-500 leading-relaxed">
                   {t[lang].aboutDesc}
                 </p>
-                <ul className="space-y-4">
-                  {[t[lang].feature1, t[lang].feature2, t[lang].feature3].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 font-bold">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="p-8 bg-zinc-50 rounded-3xl border border-black/5">
+                  <div className="text-4xl font-black mb-2">1+</div>
+                  <div className="text-sm text-zinc-500 font-bold uppercase tracking-wider">{t[lang].statsApps}</div>
+                </div>
+                <div className="p-8 bg-blue-600 text-white rounded-3xl">
+                  <div className="text-4xl font-black mb-2">2</div>
+                  <div className="text-sm text-blue-100 font-bold uppercase tracking-wider">{t[lang].statsNew}</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { title: t[lang].feature1, icon: "✨", color: "bg-blue-50" },
+                { title: t[lang].feature2, icon: "🎥", color: "bg-purple-50" },
+                { title: t[lang].feature3, icon: "⚡", color: "bg-amber-50" },
+                { title: t[lang].feature4, icon: "🔋", color: "bg-emerald-50" },
+                { title: t[lang].feature5, icon: "💎", color: "bg-rose-50" },
+                { title: t[lang].feature6, icon: "🔄", color: "bg-indigo-50" }
+              ].map((feature, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`${feature.color} p-8 rounded-[2rem] border border-black/5 flex flex-col items-center text-center`}
+                >
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-lg font-bold">{feature.title}</h3>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="py-24 px-6 bg-black text-white overflow-hidden relative">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-          
+        {/* Reviews Section */}
+        <section className="py-24 px-6 bg-zinc-900 text-white overflow-hidden relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-600/5 blur-[120px] rounded-full" />
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="bg-zinc-900/50 backdrop-blur-xl p-12 md:p-20 rounded-[3rem] border border-white/10">
-              <div className="max-w-2xl">
-                <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8">{t[lang].contactTitle} <br /> {t[lang].contactSubtitle}</h2>
-                <p className="text-xl text-zinc-400 mb-12 leading-relaxed">
-                  {t[lang].contactDesc}
-                </p>
-                
-                <div className="flex flex-col md:flex-row gap-8">
-                  <a href="mailto:info@dovdov.dev" className="flex items-center gap-4 group">
-                    <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                      <Mail className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-zinc-500 font-bold uppercase tracking-widest mb-1">Email</div>
-                      <div className="font-bold">info@dovdov.dev</div>
-                    </div>
-                  </a>
-                  
-                  <div className="flex items-center gap-4 group">
-                    <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                      <Twitter className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-zinc-500 font-bold uppercase tracking-widest mb-1">Twitter</div>
-                      <div className="font-bold">@dovdovdev</div>
-                    </div>
+            <h2 className="text-4xl font-black tracking-tight mb-16 text-center uppercase">{t[lang].reviewsTitle}</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { text: t[lang].review1, author: "Alex M." },
+                { text: t[lang].review2, author: "Sarah K." },
+                { text: t[lang].review3, author: "Dmitry P." }
+              ].map((review, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.2 }}
+                  className="bg-white/5 backdrop-blur-lg p-8 rounded-[2rem] border border-white/10"
+                >
+                  <div className="text-blue-400 text-4xl mb-4 font-serif">"</div>
+                  <p className="text-zinc-300 italic mb-6 leading-relaxed">{review.text}</p>
+                  <div className="font-bold text-white">— {review.author}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How it Works Section */}
+        <section className="py-24 px-6 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-black tracking-tight mb-4 uppercase">{t[lang].howItWorks}</h2>
+              <div className="h-1.5 w-20 bg-blue-600 mx-auto rounded-full" />
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-12">
+              {[
+                { step: "01", title: t[lang].step1Title, desc: t[lang].step1Desc },
+                { step: "02", title: t[lang].step2Title, desc: t[lang].step2Desc },
+                { step: "03", title: t[lang].step3Title, desc: t[lang].step3Desc }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.2 }}
+                  className="relative p-8 bg-zinc-50 rounded-[2.5rem] border border-black/5"
+                >
+                  <div className="text-6xl font-black text-blue-600/10 absolute top-6 right-8 select-none">
+                    {item.step}
                   </div>
-                </div>
-              </div>
+                  <h3 className="text-2xl font-bold mb-4 relative z-10">{item.title}</h3>
+                  <p className="text-zinc-500 leading-relaxed relative z-10">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 px-6 bg-zinc-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-black tracking-tight mb-12 text-center uppercase">{t[lang].faqTitle}</h2>
+            <div className="space-y-6">
+              {[
+                { q: t[lang].faq1Q, a: t[lang].faq1A },
+                { q: t[lang].faq2Q, a: t[lang].faq2A },
+                { q: t[lang].faq3Q, a: t[lang].faq3A }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-8 rounded-3xl border border-black/5 shadow-sm"
+                >
+                  <h3 className="text-lg font-bold mb-3 flex items-center gap-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full" />
+                    {item.q}
+                  </h3>
+                  <p className="text-zinc-500 leading-relaxed pl-5">
+                    {item.a}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-black/5">
+      <footer className="pt-24 pb-12 px-6 bg-white border-t border-black/5 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8">
-            <div className="text-xl font-bold tracking-tighter">
-              dovdov<span className="text-blue-600">.dev</span>
-            </div>
-            
-            <div className="flex items-center gap-8 text-sm font-medium text-zinc-500">
-              <button 
-                onClick={() => {
-                  setCurrentPage('privacy');
-                  window.scrollTo(0, 0);
-                }}
-                className="hover:text-black transition-colors"
-              >
-                {t[lang].privacy}
-              </button>
-              <button 
-                onClick={() => {
-                  setCurrentPage('terms');
-                  window.scrollTo(0, 0);
-                }}
-                className="hover:text-black transition-colors"
-              >
-                {t[lang].terms}
-              </button>
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+            {/* Brand & Socials */}
+            <div className="lg:col-span-4 space-y-6">
+              <div className="text-3xl font-black tracking-tighter">
+                dovdov<span className="text-blue-600">.dev</span>
+              </div>
+              <p className="text-zinc-500 max-w-xs leading-relaxed text-sm">
+                {t[lang].footerDesc}
+              </p>
+              <div className="flex items-center gap-4">
+                <a href="https://instagram.com/dovdov.dev" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-black transition-colors">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="#" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-black transition-colors">
+                  <Youtube className="w-5 h-5" />
+                </a>
+                <a href="https://t.me/dovdovdev" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-black transition-colors">
+                  <Send className="w-5 h-5" />
+                </a>
+              </div>
             </div>
 
-            <div className="flex items-center gap-6">
-              <a href="#" className="text-zinc-400 hover:text-black transition-colors"><Github className="w-5 h-5" /></a>
-              <a href="#" className="text-zinc-400 hover:text-black transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="text-zinc-400 hover:text-black transition-colors"><Mail className="w-5 h-5" /></a>
+            {/* Links Columns */}
+            <div className="lg:col-span-2 space-y-6">
+              <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">{t[lang].footerAbout}</h4>
+              <ul className="space-y-3 text-sm font-black">
+                <li><a href="#" className="hover:text-blue-600 transition-colors">{t[lang].footerEditorial}</a></li>
+                <li><a href="#" className="hover:text-blue-600 transition-colors">{t[lang].footerAdvertising}</a></li>
+              </ul>
+            </div>
+
+            <div className="lg:col-span-2 space-y-6">
+              <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">{t[lang].footerApps}</h4>
+              <ul className="space-y-3 text-sm font-black">
+                <li><a href="#" className="hover:text-blue-600 transition-colors">{t[lang].footerIOS}</a></li>
+                <li><a href="#" className="hover:text-blue-600 transition-colors">{t[lang].footerAppleTV}</a></li>
+                <li><a href="#" className="hover:text-blue-600 transition-colors">{t[lang].footerAndroid}</a></li>
+                <li className="pt-4 border-t border-black/5">
+                  <button onClick={() => setCurrentPage('privacy')} className="hover:text-blue-600 transition-colors block text-zinc-400 font-bold text-xs uppercase tracking-tighter">
+                    {t[lang].privacy}
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => setCurrentPage('terms')} className="hover:text-blue-600 transition-colors block text-zinc-400 font-bold text-xs uppercase tracking-tighter">
+                    {t[lang].terms}
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            {/* Phone Mockup */}
+            <div className="lg:col-span-4 relative hidden lg:block">
+              <div className="absolute top-0 right-0 w-64 h-[500px] bg-white rounded-[2.5rem] border-[8px] border-black shadow-2xl overflow-hidden transition-all duration-700">
+                <div className="px-6 pt-4 flex justify-between items-center text-[10px] font-bold">
+                  <span>21:44</span>
+                  <div className="flex gap-1">
+                    <div className="w-3 h-2 bg-black/20 rounded-sm" />
+                    <div className="w-2 h-2 bg-black/20 rounded-full" />
+                  </div>
+                </div>
+                <div className="h-6 bg-black w-1/3 mx-auto rounded-b-xl mb-6" />
+                <div className="px-5 space-y-6">
+                  <h3 className="text-xl font-black tracking-tighter">Лента</h3>
+                  <div className="relative aspect-[3/4] bg-zinc-100 rounded-2xl overflow-hidden group">
+                    <img 
+                      src="https://picsum.photos/seed/wallpaper/400/600" 
+                      alt="Mockup" 
+                      className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+                      <div className="text-[8px] text-white/70 font-bold uppercase mb-1">Игры, Новости • 4 часа назад</div>
+                      <div className="text-[10px] text-white font-bold leading-tight">
+                        Игровая неделя: Фил Спенсер покидает Xbox...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          
-          <div className="text-sm text-zinc-400 font-medium text-center md:text-left border-t border-black/5 pt-8">
-            © {new Date().getFullYear()} dovdov.dev. {t[lang].rights}
+
+          <div className="mt-24 pt-8 border-t border-black/5 text-sm text-zinc-400 font-medium flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>© {new Date().getFullYear()} dovdov.dev. {t[lang].rights}</div>
+            <div className="flex gap-6">
+              <span className="text-[10px] uppercase tracking-widest font-black text-zinc-300">v1.0.4</span>
+            </div>
           </div>
         </div>
       </footer>
@@ -428,7 +606,9 @@ export default function App() {
             exit={{ opacity: 0, x: -100 }}
             className="fixed inset-0 z-[100] bg-white overflow-y-auto"
           >
-            <div className="max-w-3xl mx-auto px-6 py-24">
+            <div className="max-w-3xl mx-auto px-6 py-24 relative z-10">
+              <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-blue-50 to-transparent -z-10" />
+              
               <button 
                 onClick={() => setCurrentPage('home')}
                 className="flex items-center gap-2 text-blue-600 font-bold mb-12 hover:gap-3 transition-all"
@@ -440,16 +620,220 @@ export default function App() {
                 {currentPage === 'privacy' ? t[lang].privacy : t[lang].terms}
               </h1>
               
-              <div className="prose prose-lg text-zinc-500 leading-relaxed space-y-6">
-                <p>
-                  {currentPage === 'privacy' ? t[lang].privacyContent : t[lang].termsContent}
-                </p>
-                <p>
-                  {lang === 'en'
-                    ? "This document was developed by the dovdov.dev team to ensure user safety. If you have any additional questions, please contact us."
-                    : "Этот документ разработан командой dovdov.dev для обеспечения безопасности пользователей. Если у вас есть дополнительные вопросы, свяжитесь с нами."
-                  }
-                </p>
+              <div className="space-y-12">
+                {currentPage === 'privacy' ? (
+                  <div className="space-y-10">
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Introduction
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        Welcome to <strong>4K Wallpapers</strong>. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our application. By using our app, you agree to the collection and use of information in accordance with this policy.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Information We Collect
+                      </h2>
+                      <ul className="space-y-3 text-zinc-500">
+                        <li className="flex gap-3">
+                          <span className="font-bold text-black">•</span>
+                          <span><strong>Device information:</strong> Device type, operating system version, unique device identifiers</span>
+                        </li>
+                        <li className="flex gap-3">
+                          <span className="font-bold text-black">•</span>
+                          <span><strong>Usage data:</strong> App interactions, features used, time spent in the app</span>
+                        </li>
+                        <li className="flex gap-3">
+                          <span className="font-bold text-black">•</span>
+                          <span><strong>Push notification token:</strong> Used to send relevant notifications (via OneSignal)</span>
+                        </li>
+                        <li className="flex gap-3">
+                          <span className="font-bold text-black">•</span>
+                          <span><strong>Purchase information:</strong> Subscription status via Google Play Billing (we do not store payment card details)</span>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Third-Party Services
+                      </h2>
+                      <p className="text-zinc-500 mb-4">Our app uses the following third-party services that may collect information:</p>
+                      <ul className="space-y-3 text-zinc-500">
+                        <li>• <strong>Pixabay API</strong> – Provides wallpaper and image content</li>
+                        <li>• <strong>Pexels API</strong> – Provides wallpaper and video content</li>
+                        <li>• <strong>Google AdMob</strong> – Displays advertisements</li>
+                        <li>• <strong>OneSignal</strong> – Push notification service</li>
+                        <li>• <strong>Firebase (Google)</strong> – Analytics and messaging</li>
+                        <li>• <strong>Google Play Billing</strong> – In-app subscription management</li>
+                      </ul>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Advertising
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        Our app uses Google AdMob to display advertisements. AdMob may use your device's advertising ID to show personalized ads based on your interests. You can opt out of personalized advertising in your device settings.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Push Notifications
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        With your permission, we may send push notifications to inform you about new wallpapers, updates, or re-engagement messages. You can disable notifications at any time in your device settings or within the app.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Subscriptions & Purchases
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        Our app offers optional premium subscriptions (monthly and yearly) through Google Play. All transactions are securely processed by Google Play. We do not have access to your credit card or payment information. Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Data Retention
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        We retain your data only as long as necessary to provide the service. You can request deletion of your data by contacting us at the email below.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Children's Privacy
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        Our app is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Contact Us
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        If you have any questions about this Privacy Policy, please contact us at <strong>dovdov.apps@gmail.com</strong>.
+                      </p>
+                    </section>
+                  </div>
+                ) : (
+                  <div className="space-y-10">
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Acceptance of Terms
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        By downloading, installing, or using the <strong>4K Wallpapers</strong> application, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use the app.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Use of the App
+                      </h2>
+                      <p className="text-zinc-500 mb-4">You may use this app for personal, non-commercial purposes only. You agree not to:</p>
+                      <ul className="space-y-3 text-zinc-500">
+                        <li>• Use the app for any unlawful purpose</li>
+                        <li>• Attempt to reverse engineer or modify the app</li>
+                        <li>• Distribute, sell, or sublicense the app or its content</li>
+                        <li>• Use the app to infringe on any third-party intellectual property rights</li>
+                      </ul>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Content & Intellectual Property
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        All wallpapers, videos, and media content displayed in the app are provided by third-party platforms (Pixabay and Pexels) and are subject to their respective licenses. We do not claim ownership of any third-party content.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Premium Subscriptions
+                      </h2>
+                      <ul className="space-y-3 text-zinc-500">
+                        <li>• Subscriptions are billed through Google Play</li>
+                        <li>• Subscriptions automatically renew unless cancelled 24h before renewal</li>
+                        <li>• You can manage subscriptions in your Google Play account settings</li>
+                        <li>• No refunds are provided for unused portions of a subscription period</li>
+                      </ul>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Advertisements
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        The free version of the app displays advertisements powered by Google AdMob. By using the free version, you consent to the display of ads. Premium subscribers enjoy an ad-free experience.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Disclaimer of Warranties
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        The app is provided "as is" without warranties of any kind. We do not warrant that the app will be uninterrupted or error-free, or that content provided by third-party APIs will always be available.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Termination
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        We reserve the right to terminate or suspend your access to the app at any time, without notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Governing Law
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        These Terms shall be governed by and construed in accordance with applicable laws. Any disputes shall be resolved through good-faith negotiation.
+                      </p>
+                    </section>
+
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold text-blue-600 flex items-center gap-3">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full" />
+                        Contact Us
+                      </h2>
+                      <p className="text-zinc-500 leading-relaxed">
+                        If you have any questions about these Terms of Use, please contact us at <strong>dovdov.apps@gmail.com</strong>.
+                      </p>
+                    </section>
+                  </div>
+                )}
               </div>
 
               <div className="mt-20 pt-12 border-t border-black/5 flex items-center justify-between">
