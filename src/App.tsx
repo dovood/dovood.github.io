@@ -4,7 +4,7 @@
  */
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   Smartphone, 
   Image as ImageIcon, 
